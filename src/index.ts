@@ -3,8 +3,9 @@ import Day1 from './day1';
 import Day2 from './day2';
 import Day3 from './day3';
 import Day4 from './day4';
+import Day5 from './day5';
 
-const days: Day[] = [Day1, Day2, Day3, Day4];
+const days: Day[] = [Day1, Day2, Day3, Day4, Day5];
 
 async function runDay(dayId: number) {
   const resultPart1 = await days[dayId].partOne();
