@@ -1,4 +1,5 @@
 import Day from '../day';
+import { createRangeArray } from '../helpers';
 
 type PartNumber = {
   identifier: string;
@@ -21,13 +22,11 @@ class Day3 extends Day {
       const startPos = partNumberMatch.index || 0;
       const endPos = partNumberMatch.match.length + startPos;
 
-      return Array(endPos - startPos)
-        .fill(startPos)
-        .map((_, idx) => [
-          startPos + idx,
-          partNumberMatch.identifier,
-          +partNumberMatch.match,
-        ]);
+      return createRangeArray(endPos - startPos).map((_, idx) => [
+        startPos + idx,
+        partNumberMatch.identifier,
+        +partNumberMatch.match,
+      ]);
     };
 
     const partNumberRanges: number[][] = partNumberMatches
