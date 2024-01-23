@@ -9,6 +9,7 @@ import Day7 from './day7';
 import Day8 from './day8';
 import Day9 from './day9';
 import Day10 from './day10';
+import Day11 from './day11';
 
 const days: Day[] = [
   Day1,
@@ -21,6 +22,7 @@ const days: Day[] = [
   Day8,
   Day9,
   Day10,
+  Day11,
 ];
 
 async function runDay(dayId: number) {
